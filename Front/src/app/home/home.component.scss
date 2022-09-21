@@ -1,0 +1,36 @@
+.home1 {
+  display: flex;
+  margin: 0;
+  justify-content: space-around;
+}
+
+.home2 {
+  display: flex;
+  flex-direction: row;
+  padding: 50px 50px;
+}
+.home-text {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin-right: 100px;
+  padding-bottom: 200px;
+}
+.home-image {
+  display: flex;
+  margin-left: 100px;
+}
+
+#home-h1{
+  font-size: 35px;
+  padding-bottom: 40px;
+  line-height: 45px;
+}
+
+#paciente-e-medica {
+  width: 700px;
+  height: 700px;
+  display: flex;
+}
