@@ -2,10 +2,32 @@
     <div class="header">
         <h1 id="header">LOGO AQUI</h1>
         <header>
-            <button type="button" id="header" routerLink="/home" >Home</button>
-            <button type="button" id="header" routerLink="/pacientes">Pacientes</button>
-            <button type="button" id="header" routerLink="/consultas" class="dropdown-toggle">Consultas</button>
-            <button type="button" id="header" routerLink="/tratamentos" class="dropdown-toggle">Tratamentos</button>
+            <button type="button" id="header" routerLink="/home">Home</button>
+        
+            <div class="dropdown">
+                <button type="button" id="header" class="dropdown-toggle">Pacientes</button>
+                <div class="dropdown-content">
+                    <a routerLink="/pacientes2">Cadastrar Pacientes</a>
+                    <a routerLink="/pacientes">Visualizar Pacientes</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button type="button" id="header" class="dropdown-toggle">Consultas</button>
+                <div class="dropdown-content">
+                    <a routerLink="/consultas">Marcar Consultas</a>
+                    <a routerLink="/visualizarconsultas">Visualizar Consultas</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button type="button" id="header" routerLink="/tratamentos" class="dropdown-toggle">Tratamentos</button>
+                <div class="dropdown-content">
+                    <a routerLink="/consultas">Marcar Tratamentos</a>
+                    <a routerLink="/visualizarconsultas">Visualizar Tratamentos</a>
+                </div>
+            </div>
+            
             <button type="button" id="header" routerLink="/login" routerLinkActive="selected">Sair</button>
+
         </header>
-    

@@ -27,6 +27,13 @@
 .button-search {
     width: auto;
     height: 40px;
+    background-color: #10203C;
+    color: white;
+}
+
+.button-search:hover {
+    background-color: #A1C6EA;
+    color: black;
 }
 
 .tabela {
