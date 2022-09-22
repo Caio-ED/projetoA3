@@ -20,7 +20,7 @@ ou
 
 ### Para criar as pastas para utilizar:
 
-`ng generate component NOME-angular-cli`
+`ng generate component NOME`
 
 ### Para instalar os frameworks utilizados:
 

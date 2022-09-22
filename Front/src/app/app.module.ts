@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { LoginComponent } from './inicio/login/login.component';
 import { RegisterComponent } from './inicio/register/register.component';
+import { PacientesComponent } from './pacientes/pacientes.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { RegisterComponent } from './inicio/register/register.component';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
+    PacientesComponent,
   ],
   imports: [
     BrowserModule,
