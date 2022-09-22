@@ -1,33 +1,41 @@
 # Projetoa3
 
-## Instalando o Angular no VSCODE (FRONT)
+## Instalando o Angular no VSCODE (FRONT-END)
 
 Baixe o projeto na sua máquina e abra-o com VSCODE
 
 ### No terminal do VSCODE dentro do projeto, siga os passos:
 
-1: cd /Front (Exemplo: C:\Users\~~~~~~\~~~~~\Área de Trabalho\ProjetoA3\Front)
+1: `cd /Front` (Ficará mais ou menos assim: C:\Users\~~~~~~\~~~~~\Área de Trabalho\ProjetoA3\Front)
 
-2: npm install
+2: `npm install`
 
-3: npm install --save-dev @angular/cli
+3: `npm install --save-dev @angular/cli`
 
 ### Para abrir o servidor: 
 
-ng serve
+`ng serve`
 ou
-ng serve --open
+`ng serve --open`
 
 ### Para criar as pastas para utilizar:
 
-ng generate component NOME-angular-cli
+`ng generate component NOME-angular-cli`
 
 ### Para instalar os frameworks utilizados:
 
-Bootstrap: npm install --save bootstrap
-Jquery: npm install --save jquery
+Bootstrap: `npm install --save bootstrap`
+Jquery: `npm install --save jquery`
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
+
+## Instalando as coisas do BACK END
+
+
+
+
+## Skills Angular:
+
 
 ### Development server
 
