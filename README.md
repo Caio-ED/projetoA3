@@ -1,5 +1,9 @@
 # Projetoa3
 
+##Integrantes:
+Caio Emidio Daniel RA:821136207
+...
+
 ## Instalando o Angular no VSCODE (FRONT-END)
 
 Baixe o projeto na sua máquina e abra-o com VSCODE
