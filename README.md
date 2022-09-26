@@ -3,6 +3,7 @@
 ## Integrantes:
 
 Caio Emidio Daniel RA:821136207
+
 ...
 
 ## Instalando o Angular no VSCODE (FRONT-END)
