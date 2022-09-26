@@ -1,1 +1,97 @@
-<p>cadastro-pacientes works!</p>
+<body>
+    
+<app-header></app-header>
+
+<div class="cadastro-paciente">
+    <div class="alto-relevo">
+
+        
+        <form>
+            <h2 class="espacamento">Cadastro de Paciente</h2>
+            <div class="form-paciente espacamento">
+            
+        <div>
+            <div class="form-outline mb-2">
+              <label class="form-label" for="name-paciente">Nome completo</label>
+              <input type="name" id="name-paciente" class="form-control form-width" autocomplete="off"
+                placeholder="Nome completo do paciente" />
+            </div>
+
+            <div class="form-outline mb-2">
+              <label class="form-label" for="cpf-paciente">CPF</label>
+              <Input type="cpf" id="cpf-paciente" class="form-control form-width" autocomplete="off"
+                placeholder="CPF do paciente">
+            </div>
+
+            <div class="form-outline mb-2">
+                <label class="form-label" for="cpf-paciente">E-mail</label>
+                <Input type="email" id="email-paciente" class="form-control form-width" autocomplete="off"
+                  placeholder="E-mail do paciente">
+              </div>
+            
+            <div class="form-outline mb-2">
+              <label class="form-label" for="birthday">Data de Nascimento</label>
+              <input type="birthday" id="birthday" class="form-control form-width" autocomplete="off"
+                placeholder="Data de nascimento do paciente" />
+            </div>
+        </div>
+            
+        <div class="form-paciente2">
+            <div class="form-outline mb-2">
+                <label class="form-label" for="cep-paciente">CEP</label>
+                <input type="cep" id="cep-paciente" class="form-control form-cep" autocomplete="off"
+                  placeholder="CEP do paciente" />
+              </div>
+              
+              <div class="form-outline mb-2 form-address">
+                <div class="form-endereco-duplo">
+                <label class="form-label" for="address-paciente">Endereço</label>
+                <input type="address" id="address-paciente" class="form-control form-endereco" autocomplete="off"
+                  placeholder="Endereço do paciente" />
+                </div>
+                <div class="form-endereco-duplo">
+                <label class="form-label" for="address-number-paciente">Número</label>
+                <input type="address-number" id="address-number-paciente" class="form-control form-numero" autocomplete="off"
+                  placeholder="Nº" />
+                </div>
+              </div>
+
+              <div class="form-outline mb-2 form-address">
+                <div class="form-endereco-duplo">
+                <label class="form-label" for="address-complemento-paciente">Complemento</label>
+                <input type="address-complemento" id="address-complemento-paciente" class="form-control form-complemento" autocomplete="off"
+                  placeholder="Complemento" />
+                </div>
+                <div class="form-endereco-duplo">
+                <label class="form-label" for="address-bairro-paciente">Bairro</label>
+                <input type="address-bairro" id="address-bairro-paciente" class="form-control form-bairro" autocomplete="off"
+                  placeholder="Bairro" />
+                </div>
+              </div>
+
+              <div class="form-outline mb-2 form-address">
+                <div class="form-endereco-duplo">
+                <label class="form-label" for="address-estado-paciente">Estado</label>
+                <input type="address-estado" id="address-estado-paciente" class="form-control form-estado" autocomplete="off"
+                  placeholder="Estado" />
+                </div>
+                <div>
+                <label class="form-label" for="address-cidade-paciente">Cidade</label>
+                <input type="address-cidade" id="address-cidade-paciente" class="form-control form-cidade" autocomplete="off"
+                  placeholder="Cidade" />
+                </div>
+              </div>
+        </div>
+        </div>
+
+            <div class="text-center pt-1 mb-5 pb-1 cadastrar espacamento">
+              <button class="btn btn-block fa-lg custombutton" type="button" routerLink="/login" routerLinkActive="selected">Cadastrar</button>
+            </div>
+
+          </form>
+    </div>
+</div>
+
+<app-footer></app-footer>
+
+</body>

@@ -1,5 +1,4 @@
 .pacientes-search {
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -11,6 +10,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 150px;
+    padding-bottom: 50px;
 }
 
 .text-search2 {
@@ -36,7 +36,35 @@
     color: black;
 }
 
-.tabela {
-    display: flex;
-    text-align: center;
+.intro {
+  height: 100%;
+  padding-bottom: 50px;
 }
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+thead th {
+  color: #fff;
+}
+
+.card {
+  border-radius: .5rem;
+}
+
+.table-scroll {
+  border-radius: .5rem;
+}
+
+.table-scroll table thead th {
+  font-size: 1.25rem;
+}
+thead {
+  top: 0;
+  position: sticky;
+}
+
