@@ -1,5 +1,5 @@
 # Projeto A3 - Clinica Brasil Saúde
-## Repositorio - BackEnd: Arquitetura em microsserviços.
+## Repositorio - BackEnd
 https://github.com/Caio-ED/backendA3
 
 ## Integrantes
