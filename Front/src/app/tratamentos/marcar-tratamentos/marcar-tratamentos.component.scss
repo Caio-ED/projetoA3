@@ -1,0 +1,97 @@
+.marcar-tratamento {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #10203c;
+    padding: 100px 100px;
+}
+
+.alto-relevo {
+    flex-direction: column;
+    height: 700px;
+    width: 1000px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    
+}
+
+h2{
+    font-size: xx-large;
+    padding-top: 50px;
+}
+
+form {
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+.espacamento {
+    padding-bottom: 60px;
+}
+
+.form-label {
+    display: flex;
+}
+
+.form-paciente {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-address {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-width {
+    width: 350px;
+}
+
+.form-cep {
+    width: 350px;
+}
+
+.form-endereco {
+    width: 280px;
+}
+
+.form-numero{
+    width: 50px;
+}
+
+.form-complemento {
+    width: 150px;
+}
+
+.form-bairro {
+    width: 180px;
+}
+
+.form-estado {
+    width: 80px;
+}
+
+.form-cidade {
+    width: 250px;
+}
+
+.cadastrar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.custombutton {
+    width: 300px;
+    color: white;
+    background-color: #10203c;
+}
+
+.custombutton:hover {
+    color: black;
+    background-color: #A1C6EA;
+}
+
+

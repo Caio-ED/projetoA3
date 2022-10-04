@@ -13,6 +13,9 @@ import { LoginComponent } from './inicio/login/login.component';
 import { RegisterComponent } from './inicio/register/register.component';
 import { VisualizarPacienteComponent } from './pacientes/visualizar-paciente/visualizar-paciente.component';
 import { CadastroPacientesComponent } from './pacientes/cadastro-pacientes/cadastro-pacientes.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { MarcarTratamentosComponent } from './tratamentos/marcar-tratamentos/marcar-tratamentos.component';
+import { VisualizarTratamentosComponent } from './tratamentos/visualizar-tratamentos/visualizar-tratamentos.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,10 @@ import { CadastroPacientesComponent } from './pacientes/cadastro-pacientes/cadas
     RegisterComponent,
     CadastroPacientesComponent,
     VisualizarPacienteComponent,
+    PerfilComponent,
+    MarcarTratamentosComponent,
+    VisualizarTratamentosComponent,
+
   ],
   imports: [
     BrowserModule,

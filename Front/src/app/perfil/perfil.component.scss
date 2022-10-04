@@ -1,0 +1,52 @@
+.dale {
+    display: flex   ;
+    background-image: url(/assets/images/arvore.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position-y: -250px;
+    padding: 150px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start
+}
+
+.cachorro {
+    border-radius: 15rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
+}
+
+.cachorro:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
+    transform: scale(1.04);
+    transition: 1s;
+}
+
+.foto {
+    position: relative;
+    bottom: 150px;
+    padding-right: 80px;
+    padding-left: 300px;
+}
+
+h1 {
+    font-size: xx-large;
+    padding-top: 30px;
+}
+
+h3 {
+    margin: 0;
+}
+
+
+
+
+
+
+
+.pogger {
+    height: 1000px;
+}
