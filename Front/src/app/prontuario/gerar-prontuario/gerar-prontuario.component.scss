@@ -1,4 +1,4 @@
-.marcar-tratamento {
+.prontuario-medico {
     display: flex;
     align-items: center;
     text-align: center;
@@ -28,14 +28,14 @@ form {
 }
 
 .espacamento {
-    padding-bottom: 60px;
+    padding-bottom: 30px;
 }
 
 .form-label {
     display: flex;
 }
 
-.form-paciente {
+.form-prontuario {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -50,32 +50,13 @@ form {
     width: 350px;
 }
 
-.form-cep {
-    width: 350px;
+.medicamento {
+    height: 275px;
 }
 
-.form-endereco {
-    width: 280px;
-}
-
-.form-numero{
-    width: 50px;
-}
-
-.form-complemento {
-    width: 150px;
-}
-
-.form-bairro {
-    width: 180px;
-}
-
-.form-estado {
-    width: 80px;
-}
-
-.form-cidade {
-    width: 250px;
+.observacoes {
+    width: 760px;
+    height: 100px;
 }
 
 .cadastrar {
@@ -93,5 +74,6 @@ form {
     color: black;
     background-color: #A1C6EA;
 }
+
 
 

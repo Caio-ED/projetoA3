@@ -1,0 +1,80 @@
+<body>
+    
+    <app-header></app-header>
+    
+    <div class="prontuario-medico">
+        <div class="alto-relevo">
+    
+            
+            <form>
+                <h2 class="espacamento">Prontuário Médico</h2>
+                <div class="form-prontuario">
+                
+            <div>
+                <div class="form-outline mb-2">
+                  <label class="form-label" for="name-prontuario">Nome completo</label>
+                  <input type="name" id="name-prontuario" class="form-control form-width" autocomplete="off"
+                    placeholder="Nome completo do paciente"/>
+                </div>
+    
+                <div class="form-outline mb-2">
+                  <label class="form-label" for="inicioTratamento">Início do tratamento</label>
+                  <Input type="date" id="inicioTratamento" class="form-control form-width" autocomplete="off">
+                </div>
+    
+                <div class="form-outline mb-2">
+                    <label class="form-label" for="tipoDoenca">Tipo de doença</label>
+                      <select type="form" id="tipoDoenca" class="form-control form-width" autocomplete="off"
+                      placeholder="Tipo de efermidade do paciente">
+                        <option><input type="text" placeholder="Tipo de efermidade do paciente"></option>
+                        <option>Transtorno bipolar</option>
+                        <option>Transtorno obsessivo-compulsivo (TOC)</option>
+                        <option>Distúrbios alimentares</option>
+                        <option>Transtornos de Ansiedade</option>
+                        <option>Esquizofrenia</option>
+                        <option>Somatização</option>
+                      </select>
+                  </div>
+                
+                <div class="form-outline mb-2">
+                  <label class="form-label" for="gravidade">Gravidade</label>                
+                  <select type="form" id="gravidade" class="form-control form-width" autocomplete="off"
+                      placeholder="Gravidade do paciente">
+                        <option><input type="text" placeholder="Gravidade do paciente"></option>
+                        <option>Baixa</option>
+                        <option>Média</option>
+                        <option>Alta</option>
+                        <option>Muito alta</option>
+                      </select>
+                </div>
+            </div>
+                
+            <div class="form-prontuario2">
+                <div class="form-outline mb-2">
+                    <label class="form-label" for="medicamento">Medicamento</label>
+                    <input type="text" id="medicamento" class="form-control form-width medicamento" autocomplete="off"
+                      placeholder="Insira algum medicamento se necessário"/>
+                </div>
+             
+            </div>
+
+            
+        </div>
+
+        <div class="form-outline mb-2 espacamento">
+            <label  class="form-label" for="observacoes">Observações</label>
+            <input  type="text" id="observacoes" class="form-control form-width observacoes" autocomplete="off"
+              placeholder="Observações que se tem com o estado do paciente" />
+        </div>
+    
+                <div class="text-center pt-1 mb-5 pb-1 cadastrar espacamento">
+                  <button class="btn btn-block fa-lg custombutton" type="button">Gerar Prontuário</button>
+                </div>
+    
+              </form>
+        </div>
+    </div>
+    
+    <app-footer></app-footer>
+    
+    </body>

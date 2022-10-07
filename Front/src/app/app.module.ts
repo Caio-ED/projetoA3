@@ -14,8 +14,9 @@ import { RegisterComponent } from './inicio/register/register.component';
 import { VisualizarPacienteComponent } from './pacientes/visualizar-paciente/visualizar-paciente.component';
 import { CadastroPacientesComponent } from './pacientes/cadastro-pacientes/cadastro-pacientes.component';
 import { PerfilComponent } from './perfil/perfil.component';
-import { MarcarTratamentosComponent } from './tratamentos/marcar-tratamentos/marcar-tratamentos.component';
-import { VisualizarTratamentosComponent } from './tratamentos/visualizar-tratamentos/visualizar-tratamentos.component';
+import { GerarProntuarioComponent } from './prontuario/gerar-prontuario/gerar-prontuario.component';
+import { VisualizarProntuarioComponent } from './prontuario/visualizar-prontuario/visualizar-prontuario.component';
+
 
 @NgModule({
   declarations: [
@@ -28,8 +29,9 @@ import { VisualizarTratamentosComponent } from './tratamentos/visualizar-tratame
     CadastroPacientesComponent,
     VisualizarPacienteComponent,
     PerfilComponent,
-    MarcarTratamentosComponent,
-    VisualizarTratamentosComponent,
+    GerarProntuarioComponent,
+    VisualizarProntuarioComponent,
+
 
   ],
   imports: [

@@ -5,8 +5,8 @@ import { LoginComponent } from './inicio/login/login.component';
 import { RegisterComponent } from './inicio/register/register.component';
 import { CadastroPacientesComponent } from './pacientes/cadastro-pacientes/cadastro-pacientes.component';
 import { VisualizarPacienteComponent } from './pacientes/visualizar-paciente/visualizar-paciente.component';
-import { MarcarTratamentosComponent } from './tratamentos/marcar-tratamentos/marcar-tratamentos.component';
-import { VisualizarTratamentosComponent } from './tratamentos/visualizar-tratamentos/visualizar-tratamentos.component';
+import { GerarProntuarioComponent } from './prontuario/gerar-prontuario/gerar-prontuario.component';
+import { VisualizarProntuarioComponent } from './prontuario/visualizar-prontuario/visualizar-prontuario.component';
 import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
@@ -16,8 +16,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'CadastroPacientes', component: CadastroPacientesComponent},
   { path: 'VisualizarPaciente', component: VisualizarPacienteComponent},
-  { path: 'MarcarTratamentos', component: MarcarTratamentosComponent},
-  { path: 'VisualizarTratamentos', component: VisualizarTratamentosComponent},
+  { path: 'GerarProntuario', component: GerarProntuarioComponent},
+  { path: 'VisualizarProntuario', component: VisualizarProntuarioComponent},
   { path: 'perfil', component: PerfilComponent},
   
 ];
