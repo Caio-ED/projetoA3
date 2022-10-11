@@ -28,7 +28,8 @@
                       
                       <div class="form-outline mb-2">
                         <label class="form-label" for="email">E-mail</label>
-                        <input type="email" id="email" class="form-control" autocomplete="off"
+                        <input type="email" 
+                          pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" id="email" class="form-control" autocomplete="off"
                           placeholder="Digite seu e-mail" />
                       </div>
                       
@@ -38,11 +39,25 @@
                           placeholder="Digite a sua senha"/>
                       </div>
 
-                      <div class="form-outline mb-5">
+                      <div class="form-outline mb-2">
                         <label class="form-label" for="password">Confirme a sua senha</label>
                         <input type="password" id="password" class="form-control"
                           placeholder="Digite a sua senha novamente"/>
                       </div>
+
+                      <p>Tipo de Perfil</p>
+                      <fieldset class="mb-5 dolly">
+                        <div>
+                          <input type="radio" id="huey" name="drone" value="huey"
+                                 checked>
+                          <label for="huey">&nbsp; Recepcionista</label>
+                        </div>
+                    
+                        <div>
+                          <input type="radio" id="dewey" name="drone" value="dewey">
+                          <label for="dewey">&nbsp; Enfermeiro(a) / Psicólogo(a)</label>
+                        </div>
+                    </fieldset>
     
                       <div class="text-center pt-1 mb-5 pb-1 loginsenha">
                         <button class="btn btn-block fa-lg customtile custombutton" type="button" routerLink="/login" routerLinkActive="selected">Registre-se</button>
