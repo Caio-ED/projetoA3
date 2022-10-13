@@ -1,1 +1,75 @@
-<p>visualizar-prontuario works!</p>
+<body>
+    <app-header></app-header>
+
+    <div class="pacientes-search">
+
+        <div class="text-search">
+            <div class="text-search2">
+                <label for="pacientes-table"></label>
+                <input class="input-search form-control" type="search" placeholder="Pesquisar" autocomplete="off">
+            </div>
+                <button type="button" class="btn button-search">Pesquisar</button>
+        </div>
+
+        <div class="tabela">
+            <section class="intro">
+                <div class="bg-image h-100" style="background-color: #DAE3E5;">
+                  <div class="mask d-flex align-items-center h-100">
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-12">
+                          <div class="card">
+                            <div class="card-body p-0">
+                              <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 500px">
+                                <table class="table table-striped mb-0">
+                                  <thead style="background-color: #10203c;">
+                                    <tr>
+                                      <th scope="col">Nome</th>
+                                      <th scope="col">Ínicio do tratamento</th>
+                                      <th scope="col">Tipo de doença</th>
+                                      <th scope="col">Gravidade</th>
+                                      <th scope="col">Medicamento</th>
+                                      <th scope="col">Observações</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>José Azevedo</td>
+                                      <td>19/04/2022</td>
+                                      <td>Transtorno Bipolar</td>
+                                      <td>Média</td>
+                                      <td>Nenhum</td>
+                                      <td>Paciente necessita de [...]</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cláudio</td>
+                                      <td>30/07/2021</td>
+                                      <td>Somatização</td>
+                                      <td>Alta</td>
+                                      <td>Nenhum</td>
+                                      <td>Paciente necessita de [...]</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Sim</td>
+                                      <td>19/04/2020</td>
+                                      <td>Transtorno Bipolar</td>
+                                      <td>Média</td>
+                                      <td>Nenhum</td>
+                                      <td>Paciente necessita de [...]</td>
+                                    </tr>                             
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        </div>
+    </div>
+    
+    <app-footer></app-footer>
+</body>
