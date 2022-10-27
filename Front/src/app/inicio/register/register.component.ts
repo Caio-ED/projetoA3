@@ -1,4 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { NgxMaskModule } from 'ngx-mask';
+
+interface Funcionario {
+  nomeFuncionario: string;
+  cpfFuncionario: string;
+  emailFuncionario: string;
+  passwordFuncionario: string;
+  confirmPasswordFuncionario: string;
+  recepcionista: string;
+  enfermeiro: string;
+
+}
 
 @Component({
   selector: 'app-register',
@@ -7,9 +21,57 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  // funcionarios = new FormGroup(''){}
 
-  ngOnInit(): void {
+  funcionario= {
+        nomeFuncionario: "",
+        cpfFuncionario: "",
+        emailFuncionario: "",
+        passwordFuncionario: "",
+        confirmPasswordFuncionario: "",
+        recepcionista: "",
+        enfermeiro: "",
+  } 
+
+  registerFn(form:NgForm){
+
+    let passwordFuncionario = form.value.passwordFuncionario;
+    let confirmPasswordFuncionario = form.value.confirmPasswordFuncionario;
+
+    if(passwordFuncionario === confirmPasswordFuncionario && form.valid){
+      console.log("Senha compatível");
+      console.log(this.funcionario);
+    }
+
+    else{
+      console.log("Senha não correspondente")
+    }
   }
 
+  // passwordMatch(form:NgForm){
+
+  //   let passwordFuncionario = form.value.passwordFuncionario;
+  //   let confirmPasswordFuncionario = form.value.confirmPasswordFuncionario;
+
+
+  //   if(passwordFuncionario === confirmPasswordFuncionario && form.valid){
+  //     console.log("Senha compatível");
+  //   }
+
+  //   else{
+  //     (form.invalid)
+  //     console.log("Senha não correspondente")
+      
+  //   }
+  // }
+
+
+  constructor() { }
+
+
+  ngOnInit(): void { }
+
+
 }
+
+

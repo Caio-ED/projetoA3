@@ -8,6 +8,9 @@ import { VisualizarPacienteComponent } from './pacientes/visualizar-paciente/vis
 import { GerarProntuarioComponent } from './prontuario/gerar-prontuario/gerar-prontuario.component';
 import { VisualizarProntuarioComponent } from './prontuario/visualizar-prontuario/visualizar-prontuario.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { AuthGuardService } from './guards/auth-guard.service';
+
+// , canActivate: [AuthGuardService]
 
 const routes: Routes = [
   { path: '', redirectTo:'login', pathMatch:'full'},
@@ -19,6 +22,7 @@ const routes: Routes = [
   { path: 'GerarProntuario', component: GerarProntuarioComponent},
   { path: 'VisualizarProntuario', component: VisualizarProntuarioComponent},
   { path: 'perfil', component: PerfilComponent},
+
   
 ];
 

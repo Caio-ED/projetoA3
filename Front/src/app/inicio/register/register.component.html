@@ -1,87 +1,139 @@
 <body class="site">
   <section class="h-100 gradient-form" style="background-color: #A1C6EA;">
-      <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-xl-10">
-            <div class="card rounded-5 text-black shadow">
-              <div class="g-0 inverterdiv">
-                <div class="col-lg-6">
-                  <div class="card-body p-md-5 mx-md-4">
-    
-                    <div class="text-center">
-                      <h1 class="titulo-inicio mt-2 mb-5">REGISTRE-SE</h1>
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-5 text-black shadow">
+            <div class="g-0 inverterdiv">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+
+                  <div class="text-center">
+                    <h1 class="titulo-inicio mt-2 mb-5">REGISTRE-SE</h1>
+                  </div>
+
+                  <form #register="ngForm" (ngSubmit)="register.form.valid && registerFn(funcionarioForm)" #funcionarioForm ="ngForm">
+
+                    <div class="form-outline mb-2">
+                      <label class="form-label" for="nomeFuncionario">Nome</label>
+                      <input type="text" id="nomeFuncionario" class="form-control"
+                        [(ngModel)]="funcionario.nomeFuncionario" name="nomeFuncionario" ngDefaultControl
+                        #nomeFuncionario="ngModel" required maxlength="42"
+                        [ngClass]="{'error' : nomeFuncionario.errors && nomeFuncionario.touched}" autocomplete="off"
+                        placeholder="Digite seu nome completo" />
+                      <div *ngIf="nomeFuncionario.errors && nomeFuncionario.touched">
+                        <small class="text-danger" *ngIf="nomeFuncionario.errors['required']">O nome do funcionário é
+                          obrigatório</small>
+                        <small class="text-danger" *ngIf="nomeFuncionario.errors['maxlength']">Máximo 42
+                          caracteres</small>
+                      </div>
                     </div>
 
-                    <form>
-    
-                      <div class="form-outline mb-2">
-                        <label class="form-label" for="name">Nome</label>
-                        <input type="name" id="name" class="form-control" autocomplete="off"
-                          placeholder="Digite seu nome completo" />
+                    <div class="form-outline mb-2">
+                      <label class="form-label" for="cpfFuncionario">CPF</label>
+                      <Input type="text" id="cpfFuncionario" class="form-control"
+                        [(ngModel)]="funcionario.cpfFuncionario" name="cpfFuncionario" ngDefaultControl
+                        #cpfFuncionario="ngModel" required mask="000.000.000-00"
+                        [ngClass]="{'error' : cpfFuncionario.errors && cpfFuncionario.touched}" autocomplete="off"
+                        placeholder="Digite seu CPF">
+                      <div *ngIf="cpfFuncionario.errors && cpfFuncionario.touched">
+                        <small class="text-danger" *ngIf="cpfFuncionario.errors['required']">O número de CPF é
+                          obrigatório</small>
                       </div>
+                    </div>
 
-                      <div class="form-outline mb-2">
-                        <label class="form-label" for="cpf">CPF</label>
-                        <Input type="cpf" id="cpf" class="form-control" autocomplete="off"
-                          placeholder="Digite seu CPF">
+                    <div class="form-outline mb-2">
+                      <label class="form-label" for="emailFuncionario">E-mail</label>
+                      <input type="email" id="emailFuncionario" class="form-control"
+                        [(ngModel)]="funcionario.emailFuncionario" name="emailFuncionario" ngDefaultControl
+                        #emailFuncionario="ngModel" required maxlength="55"
+                        [ngClass]="{'error' : emailFuncionario.errors && emailFuncionario.touched}" autocomplete="off"
+                        placeholder="Digite seu e-mail" />
+                      <div *ngIf="emailFuncionario.errors && emailFuncionario.touched">
+                        <small class="text-danger" *ngIf="emailFuncionario.errors['required']">O endereço de email é
+                          obrigatório</small>
                       </div>
-                      
-                      <div class="form-outline mb-2">
-                        <label class="form-label" for="email">E-mail</label>
-                        <input type="email" 
-                          pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" id="email" class="form-control" autocomplete="off"
-                          placeholder="Digite seu e-mail" />
-                      </div>
-                      
-                      <div class="form-outline mb-2">
-                        <label class="form-label" for="password">Senha</label>
-                        <input type="password" id="password" class="form-control" 
-                          placeholder="Digite a sua senha"/>
-                      </div>
+                    </div>
 
-                      <div class="form-outline mb-2">
-                        <label class="form-label" for="password">Confirme a sua senha</label>
-                        <input type="password" id="password" class="form-control"
-                          placeholder="Digite a sua senha novamente"/>
+                    <div class="form-outline mb-2">
+                      <label class="form-label" for="passwordFuncionario">Senha</label>
+                      <input type="password" required id="passwordFuncionario" class="form-control"
+                        #passwordFuncionario="ngModel" [(ngModel)]="funcionario.passwordFuncionario"
+                        name="passwordFuncionario" ngDefaultControl required maxlength="40"
+                        [ngClass]="{'error' : passwordFuncionario.errors && passwordFuncionario.touched}"
+                        placeholder="Digite a sua senha" />
+                      <div *ngIf="passwordFuncionario.errors && passwordFuncionario.touched">
+                        <small class="text-danger" *ngIf="passwordFuncionario.errors['required']">A senha é obrigatória</small>
                       </div>
+                    </div>
 
-                      <p>Tipo de Perfil</p>
-                      <fieldset class="mb-5 dolly">
-                        <div>
-                          <input type="radio" id="huey" name="drone" value="huey"
-                                 checked>
-                          <label for="huey">&nbsp; Recepcionista</label>
+                    <div class="form-outline mb-2">
+                      <label class="form-label" for="confirmPasswordFuncionario">Confirme a sua senha</label>
+                      <input type="password" required id="confirmPasswordFuncionario" class="form-control"
+                        #confirmPasswordFuncionario="ngModel" [(ngModel)]="funcionario.confirmPasswordFuncionario"
+                        name="confirmPasswordFuncionario" ngDefaultControl required maxlength="40"
+                        [ngClass]="{'error' : confirmPasswordFuncionario.errors && confirmPasswordFuncionario.touched}"
+                        placeholder="Digite a sua senha novamente" />
+                        <div *ngIf="confirmPasswordFuncionario.errors && confirmPasswordFuncionario.touched">
+                          <small class="text-danger" *ngIf="confirmPasswordFuncionario.errors['required']">Confirme sua senha é obrigatório</small>
                         </div>
-                    
-                        <div>
-                          <input type="radio" id="dewey" name="drone" value="dewey">
-                          <label for="dewey">&nbsp; Enfermeiro(a) / Psicólogo(a)</label>
+                    </div>
+
+                    <p>Tipo de Perfil</p>
+
+                    <fieldset class="mb-5 dolly">
+                      <div>
+                        <input type="radio" id="recepcionista" name="drone" value="recepcionista"
+                          [(ngModel)]="funcionario.recepcionista" ngDefaultControl required #recepcionista="ngModel"
+                          [ngClass]="{'error' : recepcionista.errors && recepcionista.touched}">
+                        <label for="recepcionista">&nbsp; Recepcionista</label>
+                        <div *ngIf="recepcionista.errors && recepcionista.touched">
+                          <small class="text-danger" *ngIf="recepcionista.errors['required']">Escolha o tipo de perfil</small>
                         </div>
+                      </div>
+
+                      <div>
+                        <input type="radio" id="enfermeiro" name="drone" value="enfermeiro"
+                          [(ngModel)]="funcionario.enfermeiro" ngDefaultControl required #enfermeiro="ngModel"
+                          [ngClass]="{'error' : enfermeiro.errors && enfermeiro.touched}">
+                        <label for="enfermeiro">&nbsp; Enfermeiro(a) / Psicólogo(a)</label>
+                        <div *ngIf="enfermeiro.errors && enfermeiro.touched">
+                          <small class="text-danger" *ngIf="enfermeiro.errors['required']">Escolha o tipo de perfil</small>
+                        </div>
+                      </div>
                     </fieldset>
-    
-                      <div class="text-center pt-1 mb-5 pb-1 loginsenha">
-                        <button class="btn btn-block fa-lg customtile custombutton" type="button" routerLink="/login" routerLinkActive="selected">Registre-se</button>
-                      </div>
 
-                    </form>
-    
-                  </div>
+                    <div class="text-center pt-1 mb-5 pb-1 loginsenha">
+                      <button class="btn btn-block fa-lg customtile custombutton" 
+                      [disabled]="register.form.status === 'INVALID'" 
+                      routerLink="/login" 
+                      type="submit">Registre-se</button>
+                    </div>
+
+                    <!-- <button (click)="passwordMatch()">botão</button> -->
+
+                  </form>
+
                 </div>
-                <div class="col-lg-6 d-flex align-items-center customtile dale">
-                  <div class="logo"> 
-                    <img id="logo" src="/assets/images/Logo.png" width="200px" height="200px" alt="logo">
-                  </div>
-                  <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                    <h4 class="mb-4">Nós somos uma empresa farmaceutica </h4>
-                    <p class="small mb-0">Essa aplicação é voltada para auxílio dos funcionários da empresa ______________
-                      que tem como objetivo _______________________________________ e cada dia estamos melhorando ainda mais!
-                    </p>
-                  </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center customtile dale">
+                <div class="logo">
+                  <img id="logo" src="/assets/images/Logo.png" width="200px" height="200px" alt="logo">
+                </div>
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 class="mb-4">Nós somos uma empresa farmaceutica </h4>
+                  <p class="small mb-0">Essa aplicação é voltada para auxílio dos funcionários da empresa ______________
+                    que tem como objetivo _______________________________________ e cada dia estamos melhorando ainda
+                    mais!
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
 </body>
+
