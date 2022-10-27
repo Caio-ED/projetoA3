@@ -20,7 +20,7 @@ Jhonatan Luan dos Santos do Nascimento RA:821127912
 Vladmir Neres de Oliveira RA:821142637
 ```
 
-```
+
 ## Instalando o Angular no VSCODE (FRONT-END)
 
 Baixe o projeto na sua máquina e abra-o com VSCODE
@@ -49,8 +49,6 @@ Bootstrap: `npm install --save bootstrap`
 Jquery: `npm install --save jquery`
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
-
-```
 
 ## Instalando as coisas do BACK END
 
