@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
   }
 
+  sla() {
+
+    const body = {
+      email: "dev@root.com",
+      senha: "123456"
+    };
+
+    this.httpClient.post('http://localhost:4000/usuarios/login', body).subscribe((usuarioLogado) => {
+      console.log(usuarioLogado);
+
+    })
+  }
 }

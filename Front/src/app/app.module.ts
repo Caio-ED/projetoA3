@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AuthGuardService } from './guards/auth-guard.service';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -44,6 +45,7 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
     MatToolbarModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false // ao salvar, vai manter a mascara
     }),
