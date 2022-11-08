@@ -20,7 +20,7 @@
                         [(ngModel)]="funcionario.nomeFuncionario" name="nomeFuncionario" ngDefaultControl
                         #nomeFuncionario="ngModel" required maxlength="42"
                         [ngClass]="{'error' : nomeFuncionario.errors && nomeFuncionario.touched}" autocomplete="off"
-                        placeholder="Digite seu nome completo" />
+                        placeholder="Digite seu nome completo"/>
                       <div *ngIf="nomeFuncionario.errors && nomeFuncionario.touched">
                         <small class="text-danger" *ngIf="nomeFuncionario.errors['required']">O nome do funcionário é
                           obrigatório</small>
@@ -31,16 +31,29 @@
 
                     <div class="form-outline mb-2">
                       <label class="form-label" for="cpfFuncionario">CPF</label>
+                      <input type="text" id="cpfFuncionario" class="form-control"
+                        [(ngModel)]="funcionario.cpfFuncionario" name="cpfFuncionario" ngDefaultControl
+                        #cpfFuncionario="ngModel" required maxlength="18"
+                        [ngClass]="{'error' : cpfFuncionario.errors && cpfFuncionario.touched}" autocomplete="off"
+                        placeholder="Digite seu CPF" mask="CPF_CNPJ"/>
+                      <div *ngIf="cpfFuncionario.errors && cpfFuncionario.touched">
+                        <small class="text-danger" *ngIf="cpfFuncionario.errors['required']">O CPF do funcionário é
+                          obrigatório</small>
+                      </div>
+                    </div>
+                    
+                    <!-- <div class="form-outline mb-2">
+                      <label class="form-label" for="cpfFuncionario">CPF</label>
                       <Input type="text" id="cpfFuncionario" class="form-control"
                         [(ngModel)]="funcionario.cpfFuncionario" name="cpfFuncionario" ngDefaultControl
-                        #cpfFuncionario="ngModel" required mask="000.000.000-00"
+                        #cpfFuncionario="ngModel" required maxlength="42"
                         [ngClass]="{'error' : cpfFuncionario.errors && cpfFuncionario.touched}" autocomplete="off"
-                        placeholder="Digite seu CPF">
+                        placeholder="Digite seu CPF" matInput mask="CPF_CNPJ">
                       <div *ngIf="cpfFuncionario.errors && cpfFuncionario.touched">
                         <small class="text-danger" *ngIf="cpfFuncionario.errors['required']">O número de CPF é
                           obrigatório</small>
                       </div>
-                    </div>
+                    </div> -->
 
                     <div class="form-outline mb-2">
                       <label class="form-label" for="emailFuncionario">E-mail</label>
@@ -48,7 +61,7 @@
                         [(ngModel)]="funcionario.emailFuncionario" name="emailFuncionario" ngDefaultControl
                         #emailFuncionario="ngModel" required maxlength="55"
                         [ngClass]="{'error' : emailFuncionario.errors && emailFuncionario.touched}" autocomplete="off"
-                        placeholder="Digite seu e-mail" />
+                        placeholder="Digite seu e-mail"/>
                       <div *ngIf="emailFuncionario.errors && emailFuncionario.touched">
                         <small class="text-danger" *ngIf="emailFuncionario.errors['required']">O endereço de email é
                           obrigatório</small>

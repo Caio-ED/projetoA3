@@ -48,24 +48,6 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  // passwordMatch(form:NgForm){
-
-  //   let passwordFuncionario = form.value.passwordFuncionario;
-  //   let confirmPasswordFuncionario = form.value.confirmPasswordFuncionario;
-
-
-  //   if(passwordFuncionario === confirmPasswordFuncionario && form.valid){
-  //     console.log("Senha compatível");
-  //   }
-
-  //   else{
-  //     (form.invalid)
-  //     console.log("Senha não correspondente")
-      
-  //   }
-  // }
-
-
   constructor() { }
 
 

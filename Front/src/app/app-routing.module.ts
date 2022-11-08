@@ -22,7 +22,6 @@ const routes: Routes = [
   { path: 'GerarProntuario', component: GerarProntuarioComponent},
   { path: 'VisualizarProntuario', component: VisualizarProntuarioComponent},
   { path: 'perfil', component: PerfilComponent},
-
   
 ];
 
