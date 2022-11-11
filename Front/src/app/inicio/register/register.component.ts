@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NgxMaskModule } from 'ngx-mask';
 
 interface Funcionario {
   nomeFuncionario: string;
