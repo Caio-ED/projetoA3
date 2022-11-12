@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Login } from 'src/app/models/login';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient) { }
+  inputUsario = '';
+  inputSenha = '';
+  mostra = false;
 
+  constructor(private httpClient: HttpClient,
+              private rota: Router) { 
+
+    
+  }
+    
   ngOnInit(): void {
+
   }
 
   // sla() {

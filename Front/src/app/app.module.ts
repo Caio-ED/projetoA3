@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AuthGuardService } from './guards/auth-guard.service';
 import { HttpClientModule } from '@angular/common/http';
 
+
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -49,12 +50,11 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false // ao salvar, vai manter a mascara
     }),
-
     RouterModule.forRoot ([
       { path: 'home', component: HomeComponent},
       { path: 'login', component: LoginComponent},
       { path: 'register', component: RegisterComponent} 
-    
+
     ])
     
   ],
@@ -62,5 +62,6 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
     AuthGuardService
   ],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
