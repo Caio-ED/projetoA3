@@ -11,32 +11,29 @@
                       <div class="text-center">
                         <h1 class="titulo-inicio mt-2 mb-5">LOGIN</h1>
                       </div>
-
-                      <form>
-      
-                        <div class="form-outline mb-2">
-                          <label class="form-label" for="username">Usuário</label>
-                          <input type="username" id="username" class="form-control" autocomplete="off"
-                            placeholder="Digite seu e-mail ou cpf" />
-                        </div>
+                      
+                      <!-- <form> -->
+                      
                         
-                        <div class="form-outline mb-5">
-                          <label class="form-label" for="password">Senha</label>
-                          <input type="password" id="password" class="form-control"
-                            placeholder="Digite a sua senha"/>
-                        </div>
-      
-                        <div class="text-center pt-1 mb-5 pb-1 loginsenha">
-                          <button (click)="sla()" class="btn btn-block fa-lg customtile custombutton" type="button" routerLink="/home" routerLinkActive="selected">Login</button>
-                        </div>
-      
-                        <div class="d-flex align-items-center justify-content-center pb-4">
-                          <p class="me-2 registrese">Você não possui uma conta?</p>
-                          <button type="button" class="btn customregister custombutton" routerLink="/register" routerLinkActive="selected">Registre-se</button>
-                        </div>
-      
-                      </form>
-      
+                          <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Usuario</mat-label>
+                            <input type="username" matInput [(ngModel)]="inputUsario">
+                          </mat-form-field>
+                          <p>
+                            <td><mat-form-field class="example-full-width" appearance="outline">
+                              <mat-label>Senha</mat-label>
+                              <input type="password" matInput [(ngModel)]="inputSenha">
+                            </mat-form-field></td>
+                          </p>
+                          
+                        
+
+                          <button mat-raised-button color="primary">Primary</button>
+                      <button mat-button color="primary" (click)="login()">Login</button>
+                      <p *ngIf="mostra">
+                        este é um texto que eu vou colocar aqui
+                      </p>
+
                     </div>
                   </div>
                   <div class="col-lg-6 d-flex align-items-center customtile dale">
