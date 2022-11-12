@@ -13,16 +13,16 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  sla() {
+  // sla() {
 
-    const body = {
-      email: "dev@root.com",
-      senha: "123456"
-    };
+  //   const body = {
+  //     email: "dev@root.com",
+  //     senha: "123456"
+  //   };
 
-    this.httpClient.post('http://localhost:4000/usuarios/login', body).subscribe((usuarioLogado) => {
-      console.log(usuarioLogado);
+  //   this.httpClient.post('http://localhost:4000/usuarios/login', body).subscribe((usuarioLogado) => {
+  //     console.log(usuarioLogado);
 
-    })
-  }
+  //   })
+  // }
 }
