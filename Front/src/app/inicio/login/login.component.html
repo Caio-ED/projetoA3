@@ -16,22 +16,25 @@
                           <div class="form-outline mb-2">
                             <label class="form-label" for="username">Usuário</label>
                             <input type="username" id="username" class="form-control" autocomplete="off"
-                              placeholder="Digite seu e-mail ou cpf" />
+                              placeholder="Digite seu e-mail ou cpf" [(ngModel)]="inputUsario"/>
                           </div>
   
                           <div class="form-outline mb-5">
                             <label class="form-label" for="password">Senha</label>
                             <input type="password" id="password" class="form-control"
-                              placeholder="Digite a sua senha"/>
+                              placeholder="Digite a sua senha" [(ngModel)]="inputSenha"/>
                           </div>
   
                           <div class="text-center pt-1 mb-5 pb-1 loginsenha">
-                            <button class="btn btn-block fa-lg customtile custombutton" type="button" routerLink="/home" routerLinkActive="selected">Login</button>
+                            <button class="btn btn-block fa-lg customtile custombutton" type="button" routerLinkActive="selected" (click)="login()">Login</button>
+                            <p *ngIf="mostra">
+                              este é um texto que eu vou colocar aqui
+                            </p>
                           </div>
   
                           <div class="d-flex align-items-center justify-content-center pb-4">
                             <p class="me-2 registrese">Você não possui uma conta?</p>
-                            <button type="button" class="btn customregister custombutton" routerLink="/register" routerLinkActive="selected">Registre-se</button>
+                            <button type="button" class="btn customregister custombutton" routerLink="/register" routerLinkActive="selected">Registre-se</button>                          
                           </div>
                         </form>
 
