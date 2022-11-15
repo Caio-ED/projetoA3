@@ -14,7 +14,6 @@
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: white;
-    
 }
 
 h2{
@@ -79,3 +78,38 @@ form {
     border: solid 1px rgb(255, 76, 76);
 }
 
+@media screen and (max-width: 760px) {
+    .alto-relevo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .dale {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .prontuario-medico {
+        padding: 100px 10px;
+    }
+
+    .form-prontuario {
+        flex-direction: column;
+    }
+
+    .espacamento {
+        width: 100%;
+
+        & textarea {
+            width: 100%;
+        }
+    }
+
+    .cadastrar {
+        justify-content: center;
+    }
+  }

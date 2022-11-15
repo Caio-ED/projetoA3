@@ -55,3 +55,13 @@
     border: solid 1px rgb(255, 76, 76);
     
 }
+@media screen and (max-width: 980px) {
+    .dale {
+        display: none !important;
+    }
+
+    .custombutton {
+        background-color: #10203c;
+        color: aliceblue;
+    }
+}

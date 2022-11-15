@@ -12,3 +12,17 @@ body {
     font-weight: bold;
 }
 
+::-webkit-scrollbar-track {
+    background: #10203c;
+    transition: all ease .6s;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    background: #f4f4f4;
+    transition: all ease .6s;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #f4f4f4;
+    transition: all ease .6s;
+  }
+

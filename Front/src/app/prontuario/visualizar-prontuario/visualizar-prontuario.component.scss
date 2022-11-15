@@ -68,3 +68,22 @@ thead {
   position: sticky;
 }
 
+@media screen and (max-width: 760px) {
+  .text-search {
+    flex-direction: column;
+
+    & .text-search2 {
+      display: flex;
+      align-items: center;
+      padding: 0px;
+      width: 90%;
+      margin-bottom: 20px;
+    }
+
+    & input {
+      width: 100%;
+      height: 40px;
+    }
+  }
+}
+

@@ -41,12 +41,13 @@ h3 {
     margin: 0;
 }
 
-
-
-
-
-
-
 .pogger {
     height: 1000px;
 }
+
+@media screen and (max-width: 760px) {
+    .foto {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }

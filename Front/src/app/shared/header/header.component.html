@@ -1,4 +1,4 @@
-<div class="home">
+<!-- <div class="home">
     <div class="header">
         <img src="/assets/images/Logo.png" alt="" width="70px" height="70px">
         <header>
@@ -24,4 +24,35 @@
             
             <button type="button" id="header" routerLink="/login">Sair</button>
 
-        </header>
+        </header> -->
+
+        <header class="header">
+            <img src="/assets/images/Logo.png" alt="" width="70px" height="70px">
+            <nav class="header__nav">
+              <button class="header__nav__btnMobile">
+                <span id="hamburger"></span>
+              </button>
+              <ul class="header__nav__menu">
+                <li><a href="#" id="header" routerLink="/home" class="header__nav__menu-anchor">Home</a></li>
+                <li class="--offMenu"><a href="#" id="header" routerLink="/CadastroPacientes" class="header__nav__menu-anchor">Cadastrar Pacientes</a></li>
+                <li class="--offMenu"><a href="#" id="header" routerLink="/VisualizarPaciente" class="header__nav__menu-anchor">Visualizar Pacientes</a></li>
+                <li class="--onMenu"><a href="#" id="header" class="header__nav__menu-anchor">Pacientes</a>
+                    <ul class="dropdown">
+                        <li><a href="#" routerLink="/CadastroPacientes">Cadastrar Pacientes</a></li>
+                        <li><a href="#" routerLink="/VisualizarPaciente">Visualizar Pacientes</a></li>
+                    </ul>
+                </li>
+                <li class="--onMenu"><a href="#" id="header" class="header__nav__menu-anchor">Prontuário Médico</a>
+                    <ul class="dropdown2">
+                        <li><a href="#" routerLink="/GerarProntuario">Gerar Prontuário</a></li>
+                        <li><a href="#" routerLink="/VisualizarProntuario">Visualizar Tratamentos</a></li>
+                    </ul>
+                </li>
+                <li class="--offMenu"><a href="#" id="header" routerLink="/GerarProntuario" class="header__nav__menu-anchor">Gerar Prontuário</a></li>
+                <li class="--offMenu"><a href="#" routerLink="/VisualizarProntuario" class="header__nav__menu-anchor">Visualizar Tratamentos</a></li>
+                <li><a href="#" id="header" routerLink="/perfil" class="header__nav__menu-anchor">Perfil</a></li>
+                <li><a href="#" id="header" routerLink="/login" class="header__nav__menu-anchor">Sair</a></li>
+              </ul>
+            </nav>
+          </header>
+          
