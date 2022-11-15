@@ -1,31 +1,3 @@
-<!-- <div class="home">
-    <div class="header">
-        <img src="/assets/images/Logo.png" alt="" width="70px" height="70px">
-        <header>
-            <button type="button" id="header" routerLink="/home">Home</button>
-        
-            <div class="dropdown">
-                <button type="button" id="header" class="dropdown-toggle">Pacientes</button>
-                <div class="dropdown-content">
-                    <a routerLink="/CadastroPacientes">Cadastrar Pacientes</a>
-                    <a routerLink="/VisualizarPaciente">Visualizar Pacientes</a>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <button type="button" id="header" routerLink="/prontuario" class="dropdown-toggle">Prontuário Médico</button>
-                <div class="dropdown-content">
-                    <a routerLink="/GerarProntuario">Gerar Prontuário</a>
-                    <a routerLink="/VisualizarProntuario">Visualizar Tratamentos</a>
-                </div>
-            </div>
-            
-            <button type="button" id="header" routerLink="/perfil">Perfil</button>
-            
-            <button type="button" id="header" routerLink="/login">Sair</button>
-
-        </header> -->
-
         <header class="header">
             <img src="/assets/images/Logo.png" alt="" width="70px" height="70px">
             <nav class="header__nav">
@@ -36,13 +8,13 @@
                 <li><a href="#" id="header" routerLink="/home" class="header__nav__menu-anchor">Home</a></li>
                 <li class="--offMenu"><a href="#" id="header" routerLink="/CadastroPacientes" class="header__nav__menu-anchor">Cadastrar Pacientes</a></li>
                 <li class="--offMenu"><a href="#" id="header" routerLink="/VisualizarPaciente" class="header__nav__menu-anchor">Visualizar Pacientes</a></li>
-                <li class="--onMenu"><a href="#" id="header" class="header__nav__menu-anchor">Pacientes</a>
+                <li class="--onMenu"><a href="#" routerLink="/CadastroPacientes" id="header" class="header__nav__menu-anchor">Pacientes</a>
                     <ul class="dropdown">
                         <li><a href="#" routerLink="/CadastroPacientes">Cadastrar Pacientes</a></li>
                         <li><a href="#" routerLink="/VisualizarPaciente">Visualizar Pacientes</a></li>
                     </ul>
                 </li>
-                <li class="--onMenu"><a href="#" id="header" class="header__nav__menu-anchor">Prontuário Médico</a>
+                <li class="--onMenu"><a href="#" routerLink="/GerarProntuario" id="header" class="header__nav__menu-anchor">Prontuário Médico</a>
                     <ul class="dropdown2">
                         <li><a href="#" routerLink="/GerarProntuario">Gerar Prontuário</a></li>
                         <li><a href="#" routerLink="/VisualizarProntuario">Visualizar Tratamentos</a></li>
