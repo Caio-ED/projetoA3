@@ -85,10 +85,11 @@
                       <input type="password" required id="confirmPasswordFuncionario" class="form-control"
                         #confirmPasswordFuncionario="ngModel" [(ngModel)]="funcionario.confirmPasswordFuncionario"
                         name="confirmPasswordFuncionario" ngDefaultControl required maxlength="40"
-                        [ngClass]="{'error' : confirmPasswordFuncionario.errors && confirmPasswordFuncionario.touched}"
+                        [ngClass]="{'error' : confirmPasswordFuncionario.errors && confirmPasswordFuncionario.touched && senhaNaoCompativel.errors}"
                         placeholder="Digite a sua senha novamente" />
                         <div *ngIf="confirmPasswordFuncionario.errors && confirmPasswordFuncionario.touched">
                           <small class="text-danger" *ngIf="confirmPasswordFuncionario.errors['required']">Confirme sua senha é obrigatório</small>
+                          <small *ngIf="senhaNaoCompativel"> As senhas não correspondem</small>
                         </div>
                     </div>
 
@@ -119,7 +120,6 @@
                     <div class="text-center pt-1 mb-5 pb-1 loginsenha">
                       <button class="btn btn-block fa-lg customtile custombutton" 
                       [disabled]="register.form.status === 'INVALID'" 
-                      routerLink="/login" 
                       type="submit">Registre-se</button>
                     </div>
 

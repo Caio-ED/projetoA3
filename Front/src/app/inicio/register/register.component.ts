@@ -13,6 +13,7 @@ interface Funcionario {
 
 }
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -30,7 +31,11 @@ export class RegisterComponent implements OnInit {
         confirmPasswordFuncionario: "",
         recepcionista: "",
         enfermeiro: "",
+        senhaNaoCompativel: false,
   } 
+
+  senhaNaoCompativel
+
 
   registerFn(form:NgForm){
 
@@ -43,7 +48,7 @@ export class RegisterComponent implements OnInit {
     }
 
     else{
-      console.log("Senha não correspondente")
+      this.senhaNaoCompativel = true
     }
   }
 

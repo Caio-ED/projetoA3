@@ -15,27 +15,39 @@
                         <form>
                           <div class="form-outline mb-2">
                             <label class="form-label" for="username">Usuário</label>
-                            <input type="username" id="username" class="form-control" autocomplete="off"
-                              placeholder="Digite seu e-mail ou cpf" [(ngModel)]="inputUsario"/>
+                            <input type="text" id="username" class="form-control" autocomplete="off"
+                              placeholder="Digite seu e-mail ou cpf" [(ngModel)]="inputUsuario"
+                              [ngModelOptions]="{standalone: true}" required
+                              [ngClass]="{'error' : mostra}"/>
+                              <div *ngIf="inputUsuario">
+                                <small class="text-danger" *ngIf="inputUsuario['required']">O endereço de email é
+                                  obrigatório</small>
+                              </div>
                           </div>
   
                           <div class="form-outline mb-5">
                             <label class="form-label" for="password">Senha</label>
                             <input type="password" id="password" class="form-control"
-                              placeholder="Digite a sua senha" [(ngModel)]="inputSenha"/>
+                              placeholder="Digite a sua senha" [(ngModel)]="inputSenha" [ngModelOptions]="{standalone: true}" required
+                              [ngClass]="{'error' : mostra}"/>
+                              <div *ngIf="inputSenha">
+                                <small class="text-danger" *ngIf="inputSenha['required']">O endereço de email é
+                                  obrigatório</small>
+                              </div>
                           </div>
   
                           <div class="text-center pt-1 mb-5 pb-1 loginsenha">
                             <button class="btn btn-block fa-lg customtile custombutton" type="button" routerLinkActive="selected" (click)="login()">Login</button>
-                            <p *ngIf="mostra">
-                              este é um texto que eu vou colocar aqui
-                            </p>
+                            <div *ngIf="mostra">
+                                <small class="text-danger" *ngIf="mostra">Usuário ou senha não correspondentes</small>
+                              </div>
                           </div>
   
                           <div class="d-flex align-items-center justify-content-center pb-4">
                             <p class="me-2 registrese">Você não possui uma conta?</p>
                             <button type="button" class="btn customregister custombutton" routerLink="/register" routerLinkActive="selected">Registre-se</button>                          
                           </div>
+
                         </form>
 
                     </div>

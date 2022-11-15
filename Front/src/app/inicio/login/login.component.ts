@@ -10,7 +10,7 @@ import { Login } from 'src/app/models/login';
 })
 export class LoginComponent implements OnInit {
 
-  inputUsario = '';
+  inputUsuario = '';
   inputSenha = '';
   mostra = false;
 
@@ -27,8 +27,8 @@ export class LoginComponent implements OnInit {
   login() {
 
     let body = {
-      email: this.inputUsario,
-      senha: this.inputSenha,
+      emailFuncionario: this.inputUsuario,
+      passwordFuncionario: this.inputSenha,
       msg: '',
       auth: false
     };
