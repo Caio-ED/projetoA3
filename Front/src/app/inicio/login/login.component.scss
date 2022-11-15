@@ -50,3 +50,14 @@
 .logo {
     padding-top: 30px ;
 }
+
+@media screen and (max-width: 980px) {
+    .dale {
+        display: none !important;
+    }
+
+    .custombutton {
+        background-color: #10203c;
+        color: aliceblue;
+    }
+}
