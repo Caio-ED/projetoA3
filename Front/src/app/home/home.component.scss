@@ -6,11 +6,11 @@
 
 .home2 {
   display: flex;
-  flex-direction: row;
-  padding: 50px 50px;
+    flex-direction: row;
+    padding: 50px 50px;
+    margin-top: 5rem;
 }
 .home-text {
-  width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,4 +33,10 @@
   width: 700px;
   height: 700px;
   display: flex;
+}
+
+@media screen and (max-width: 1230px) {
+  .home-image {
+    display: none !important;
+  }
 }
