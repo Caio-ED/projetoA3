@@ -1,6 +1,10 @@
 export interface Login {
-    email: '',
-    senha: '',
+
+    nomeFuncionario: '',
+    cpfFuncionario: '',
+    emailFuncionario: '',
+    passwordFuncionario: '',
+    tipoAcesso: '',
     msg: '',
     auth: false
 }

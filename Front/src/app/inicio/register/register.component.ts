@@ -1,13 +1,13 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 interface Funcionario {
   nomeFuncionario: string;
   cpfFuncionario: string;
   emailFuncionario: string;
   passwordFuncionario: string;
-  confirmPasswordFuncionario: string;
   recepcionista: string;
   enfermeiro: string;
 
@@ -29,12 +29,12 @@ export class RegisterComponent implements OnInit {
         emailFuncionario: "",
         passwordFuncionario: "",
         confirmPasswordFuncionario: "",
-        recepcionista: "",
-        enfermeiro: "",
-        senhaNaoCompativel: false,
+        tipoAcesso: "",
   } 
 
-  senhaNaoCompativel
+
+
+  senhaNaoCompativel = false;
 
 
   registerFn(form:NgForm){
@@ -42,17 +42,26 @@ export class RegisterComponent implements OnInit {
     let passwordFuncionario = form.value.passwordFuncionario;
     let confirmPasswordFuncionario = form.value.confirmPasswordFuncionario;
 
+
     if(passwordFuncionario === confirmPasswordFuncionario && form.valid){
-      console.log("Senha compatível");
-      console.log(this.funcionario);
+      this.httpClient.post<Funcionario>('http://localhost:4000/usuarios', this.funcionario).subscribe((usuarioCadastrado) => {
+        console.log(this.funcionario);
+        this.senhaNaoCompativel = false;
+        this.rota.navigate(['/login'])
+    })
     }
 
     else{
-      this.senhaNaoCompativel = true
+      console.log('senha não compativel')
+      this.senhaNaoCompativel= true;
     }
   }
 
-  constructor() { }
+  constructor(  
+    private httpClient: HttpClient,
+    private rota: Router) { 
+
+  }
 
 
   ngOnInit(): void { }

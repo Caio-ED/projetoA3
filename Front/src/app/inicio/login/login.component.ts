@@ -38,7 +38,9 @@ export class LoginComponent implements OnInit {
       this.mostra = !usuarioLogado.auth;
       body.auth = usuarioLogado.auth;
 
-      window.sessionStorage.setItem('','')
+      window.sessionStorage.setItem('nomeFuncionario',usuarioLogado.nomeFuncionario)
+      window.sessionStorage.setItem('emailFuncionario',usuarioLogado.emailFuncionario)
+      window.sessionStorage.setItem('tipoAcesso',usuarioLogado.tipoAcesso)
         this.mostra = false 
         this.rota.navigate(['/home']);
     })

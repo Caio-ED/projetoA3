@@ -23,7 +23,7 @@
                 <li class="--offMenu"><a href="#" id="header" routerLink="/GerarProntuario" class="header__nav__menu-anchor">Gerar Prontuário</a></li>
                 <li class="--offMenu"><a href="#" routerLink="/VisualizarProntuario" class="header__nav__menu-anchor">Visualizar Tratamentos</a></li>
                 <li><a href="#" id="header" routerLink="/perfil" class="header__nav__menu-anchor">Perfil</a></li>
-                <li><a href="#" id="header" routerLink="/login" class="header__nav__menu-anchor">Sair</a></li>
+                <li><a href="#" id="header" routerLink="/login" (click)="limparToken()" class="header__nav__menu-anchor">Sair</a></li>
               </ul>
             </nav>
           </header>

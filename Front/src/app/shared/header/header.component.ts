@@ -6,9 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  
 
   constructor() { }
 
+  limparToken(){
+    window.sessionStorage.clear();
+  }
+  
   ngOnInit(): void {
     const header = document.querySelector('.header') as HTMLElement | null;
     const nav = document.querySelector('.header__nav') as HTMLElement | null;
@@ -27,6 +32,7 @@ export class HeaderComponent implements OnInit {
         nav.classList.add('active')
       }
     })
+    
   }
 
 }

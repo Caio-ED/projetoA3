@@ -85,7 +85,7 @@
                       <input type="password" required id="confirmPasswordFuncionario" class="form-control"
                         #confirmPasswordFuncionario="ngModel" [(ngModel)]="funcionario.confirmPasswordFuncionario"
                         name="confirmPasswordFuncionario" ngDefaultControl required maxlength="40"
-                        [ngClass]="{'error' : confirmPasswordFuncionario.errors && confirmPasswordFuncionario.touched && senhaNaoCompativel.errors}"
+                        [ngClass]="{'error' : confirmPasswordFuncionario.errors && confirmPasswordFuncionario.touched}"
                         placeholder="Digite a sua senha novamente" />
                         <div *ngIf="confirmPasswordFuncionario.errors && confirmPasswordFuncionario.touched">
                           <small class="text-danger" *ngIf="confirmPasswordFuncionario.errors['required']">Confirme sua senha é obrigatório</small>
@@ -95,10 +95,10 @@
 
                     <p>Tipo de Perfil</p>
 
-                    <fieldset class="mb-5 dolly" id="tipoAcesso">
+                    <fieldset class="mb-2 dolly" id="tipoAcesso">
                       <div>
-                        <input type="radio" id="recepcionista" name="drone" value="recepcionista"
-                          [(ngModel)]="funcionario.recepcionista" ngDefaultControl required #recepcionista="ngModel"
+                        <input type="radio" id="recepcionista" name="drone" value="Recepcionista"
+                          [(ngModel)]="funcionario.tipoAcesso" ngDefaultControl required #recepcionista="ngModel"
                           [ngClass]="{'error' : recepcionista.errors && recepcionista.touched}">
                         <label for="recepcionista">&nbsp; Recepcionista</label>
                         <div *ngIf="recepcionista.errors && recepcionista.touched">
@@ -107,8 +107,8 @@
                       </div>
 
                       <div>
-                        <input type="radio" id="enfermeiro" name="drone" value="enfermeiro"
-                          [(ngModel)]="funcionario.enfermeiro" ngDefaultControl required #enfermeiro="ngModel"
+                        <input type="radio" id="enfermeiro" name="drone" value="Enfermeiro"
+                          [(ngModel)]="funcionario.tipoAcesso" ngDefaultControl required #enfermeiro="ngModel"
                           [ngClass]="{'error' : enfermeiro.errors && enfermeiro.touched}">
                         <label for="enfermeiro">&nbsp; Enfermeiro(a) / Psicólogo(a)</label>
                         <div *ngIf="enfermeiro.errors && enfermeiro.touched">
@@ -116,16 +116,14 @@
                         </div>
                       </div>
                     </fieldset>
+                    <p *ngIf="senhaNaoCompativel" class="text-danger">Senhas não correspondentes</p>
+                    
 
                     <div class="text-center pt-1 mb-5 pb-1 loginsenha">
                       <button class="btn btn-block fa-lg customtile custombutton" 
                       [disabled]="register.form.status === 'INVALID'" 
                       type="submit">Registre-se</button>
                     </div>
-
-                    <button routerLink="/login">
-                      dale
-                    </button>
 
                     <!-- <button (click)="passwordMatch()">botão</button> -->
 
