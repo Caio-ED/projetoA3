@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 interface Paciente {
   nome: string;
@@ -37,10 +39,14 @@ export class CadastroPacientesComponent implements OnInit {
   }
 
   registrarPaciente(form:NgForm){
-    console.log(this.paciente);
+    this.httpClient.post<Paciente>('http://localhost:3000/pacientes/cadastro', this.paciente).subscribe((pacienteCadastrado) =>{
+      console.log(this.paciente);
+    })
   }
 
-  constructor() { }
+  constructor(
+    private httpClient: HttpClient,
+    private rota: Router) { }
 
   ngOnInit(): void {
   }

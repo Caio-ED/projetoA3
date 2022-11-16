@@ -32,10 +32,7 @@ export class RegisterComponent implements OnInit {
         tipoAcesso: "",
   } 
 
-
-
   senhaNaoCompativel = false;
-
 
   registerFn(form:NgForm){
 

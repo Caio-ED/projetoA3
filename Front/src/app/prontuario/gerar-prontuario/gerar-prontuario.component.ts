@@ -1,7 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
-interface prontuario {
+interface Prontuario {
   nomeProntuario: string;
   inicioTratamento: string;
   tipoDoenca: string;
@@ -27,10 +29,15 @@ export class GerarProntuarioComponent implements OnInit {
   }
 
   gerarProntuario(form:NgForm){
-    console.log(this.prontuario);
+    this.httpClient.post<Prontuario>('http://localhost:5000/prontuarios/cadastro', this.prontuario).subscribe((prontuarioGerado) =>{
+      console.log(this.prontuario);
+    })
   }
+  
 
-  constructor() { }
+  constructor(
+    private httpClient: HttpClient,
+    private rota: Router) { }
 
   ngOnInit(): void {
   }
