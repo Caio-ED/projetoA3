@@ -6,7 +6,7 @@
     <div class="alto-relevo">
 
 
-      <form class="formResponsive" #registrar="ngForm" (ngSubmit)="registrar.form.valid && registrarPaciente(pacienteForm)" #pacienteForm="ngForm">
+      <form class="formResponsive" id="cadastrarPaciente" #registrar="ngForm" (ngSubmit)="registrar.form.valid && registrarPaciente(pacienteForm)" #pacienteForm="ngForm">
         <h2 class="espacamento">Cadastro de Paciente</h2>
         <div class="form-paciente espacamento">
 
@@ -67,9 +67,9 @@
 
               <div class="form-endereco-duplo">
                 <label class="form-label" for="numero">Número</label>
-                <input type="address-number" id="numero" class="form-control form-numero" [(ngModel)]="paciente.numero"
-                  name="numero" ngDefaultControl #numero="ngModel" required
-                  [ngClass]="{'error' : numero.errors && numero.touched}" autocomplete="off" placeholder="Nº" mask="0000"/>
+                <input type="text" id="numero" class="form-control form-numero" [(ngModel)]="paciente.numero"
+                  name="numero" ngDefaultControl #numero="ngModel" required maxlength="4"
+                  [ngClass]="{'error' : numero.errors && numero.touched}" autocomplete="off" placeholder="Nº" />
               </div>
             </div>
 
@@ -111,9 +111,10 @@
 
         <div class="text-center pt-1 mb-5 pb-1 cadastrar espacamento">
           <button class="btn btn-block fa-lg custombutton" type="submit"
-          [disabled]="registrar.form.status === 'INVALID'" 
+          [disabled]="registrar.form.status === 'INVALID'"
             routerLinkActive="selected">Cadastrar</button>
         </div>
+
 
       </form>
     </div>

@@ -26,23 +26,23 @@
                                   <thead style="background-color: #10203c;">
                                     <tr>
                                       <th scope="col">Nome</th>
-                                      <th scope="col">Idade</th>
                                       <th scope="col">CPF</th>
+                                      <th scope="col">Data de Nascimento</th>
                                       <th scope="col">E-mail</th>
-                                      <th scope="col">Endereço</th>
-                                      <th scope="col">Número</th>
                                       <th scope="col">CEP</th>
+                                      <th scope="col">Cidade</th>
+                                      <th scope="col">Estado</th>
                                     </tr>
                                   </thead>
                                   <tbody>
                                     <tr>
-                                      <td>Sim</td>
-                                      <td>Sim</td>
-                                      <td>Sim</td>
-                                      <td>Sim</td>
-                                      <td>Sim</td>
-                                      <td>Sim</td>
-                                      <td>Sim</td>
+                                      <td>{{this.paciente}}</td>
+                                      <td>{{this.paciente.cpf}}</td>
+                                      <td>{{this.paciente.dataNascimento}}</td>
+                                      <td>{{this.paciente.email}}</td>
+                                      <td>{{this.paciente.cep}}</td>
+                                      <td>{{this.paciente.cidade}}</td>
+                                      <td>{{this.paciente.estado}}</td>
                                     </tr>                         
                                   </tbody>
                                 </table>

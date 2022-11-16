@@ -2,20 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Paciente } from 'src/app/models/paciente'
 
-interface Paciente {
-  nome: string;
-  cpf: string;
-  email: string;
-  dataNascimento: string;
-  cep: string;
-  rua: string;
-  numero: string;
-  complemento:string;
-  bairro:string;
-  estado:string;
-  cidade:string;
-}
 
 @Component({
   selector: 'app-cadastro-pacientes',
@@ -39,16 +27,26 @@ export class CadastroPacientesComponent implements OnInit {
   }
 
   registrarPaciente(form:NgForm){
+    console.log(this.paciente);
     this.httpClient.post<Paciente>('http://localhost:3000/pacientes/cadastro', this.paciente).subscribe((pacienteCadastrado) =>{
-      console.log(this.paciente);
+
+    alert('Paciente cadastrado com sucesso!')
+    var limparForm= <HTMLFormElement>document.getElementById('cadastrarPaciente');
+    limparForm.reset();
+      
     })
   }
 
+
   constructor(
     private httpClient: HttpClient,
-    private rota: Router) { }
+    private rota: Router) { 
+
+      
+    }
 
   ngOnInit(): void {
+    
   }
 
 }

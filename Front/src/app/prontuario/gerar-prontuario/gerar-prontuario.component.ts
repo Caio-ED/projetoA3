@@ -2,15 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-
-interface Prontuario {
-  nomeProntuario: string;
-  inicioTratamento: string;
-  tipoDoenca: string;
-  gravidade: string;
-  medicamente: string;
-  observacoes: string;
-}
+import { Prontuario } from 'src/app/models/prontuario'
 
 @Component({
   selector: 'app-gerar-prontuario',

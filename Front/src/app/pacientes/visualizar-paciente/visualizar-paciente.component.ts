@@ -1,4 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs/internal/Observable';
+import { Paciente } from 'src/app/models/paciente';
 
 @Component({
   selector: 'app-visualizar-paciente',
@@ -7,7 +12,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VisualizarPacienteComponent implements OnInit {
 
-  constructor() { }
+  paciente= {
+    nome: "",
+    cpf: "",
+    email: "",
+    dataNascimento: "",
+    cep: "",
+    rua: "",
+    numero: "",
+    complemento: "",
+    bairro: "",
+    estado: "",
+    cidade: "",
+  }
+
+  visualizarPaciente() {
+    return this.httpClient.get<Paciente>('http://localhost:3000/pacientes/pesquisar').subscribe((visualizarPaciente) =>{
+    })
+  }
+
+  constructor(
+    private httpClient: HttpClient,
+    private rota: Router,
+  ) { }
 
   ngOnInit(): void {
   }
