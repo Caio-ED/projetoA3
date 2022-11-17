@@ -7,9 +7,9 @@
         <div class="text-search">
             <div class="text-search2">
                 <label for="pacientes-table"></label>
-                <input class="input-search form-control" type="search" placeholder="Pesquisar" autocomplete="off">
+                <input class="input-search form-control" type="search" placeholder="Pesquisar" [(ngModel)]="cpfPesquisa" autocomplete="off">
             </div>
-                <button type="button" class="btn button-search">Pesquisar</button>
+                <button type="button" class="btn button-search" (click)="visualizarPaciente()">Pesquisar</button>
         </div>
 
         <div class="tabela">
@@ -35,14 +35,14 @@
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    <tr>
-                                      <td>{{this.paciente}}</td>
-                                      <td>{{this.paciente.cpf}}</td>
-                                      <td>{{this.paciente.dataNascimento}}</td>
-                                      <td>{{this.paciente.email}}</td>
-                                      <td>{{this.paciente.cep}}</td>
-                                      <td>{{this.paciente.cidade}}</td>
-                                      <td>{{this.paciente.estado}}</td>
+                                    <tr *ngFor="let pac of Paciente; index as i; first as isFirst">
+                                      <td>{{pac.nome}}</td>
+                                      <td>{{pac.cpf}}</td>
+                                      <td>{{pac.dataNascimento}}</td>
+                                      <td>{{pac.email}}</td>
+                                      <td>{{pac.cep}}</td>
+                                      <td>{{pac.cidade}}</td>
+                                      <td>{{pac.estado}}</td>
                                     </tr>                         
                                   </tbody>
                                 </table>

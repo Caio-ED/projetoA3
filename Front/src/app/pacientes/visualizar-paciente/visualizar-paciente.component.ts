@@ -26,8 +26,13 @@ export class VisualizarPacienteComponent implements OnInit {
     cidade: "",
   }
 
+  Paciente = []
+  cpfPesquisa = ''
+
   visualizarPaciente() {
-    return this.httpClient.get<Paciente>('http://localhost:3000/pacientes/pesquisar').subscribe((visualizarPaciente) =>{
+    return this.httpClient.get<Paciente[]>(`http://localhost:3000/pacientes/pesquisa?cpf=${this.cpfPesquisa}`).subscribe((visualizarPaciente) =>{
+      this.Paciente = visualizarPaciente;
+      console.log(visualizarPaciente)
     })
   }
 
