@@ -33,7 +33,6 @@ export class CadastroPacientesComponent implements OnInit {
     alert('Paciente cadastrado com sucesso!')
     var limparForm= <HTMLFormElement>document.getElementById('cadastrarPaciente');
     limparForm.reset();
-      
     })
   }
 

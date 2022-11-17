@@ -7,10 +7,14 @@
     justify-content: space-between;
     font-family: "Raleway", sans-serif;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     padding-right: 50px;
     padding-left: 50px;
     z-index: 1000;
+
+    .home1 {
+      background-color: #10203c ;
+    }
   
     &-brand {
       font-size: 1.5em;
@@ -45,20 +49,6 @@
           }
         }
 
-        // & .dropdown {
-            
-        //     left: 0;
-        //     position: absolute;
-        // }
-
-        // & .--change1 {
-        //      &:hover {
-        //         .dropdown {
-        //             display: block;
-        //         }
-        //      }
-        // }
-  
         &-anchor {
           position: relative;
           color: #fff;

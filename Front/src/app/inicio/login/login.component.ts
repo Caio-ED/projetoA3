@@ -25,13 +25,14 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-
+    
     let body = {
       emailFuncionario: this.inputUsuario,
       passwordFuncionario: this.inputSenha,
-      msg: '',
       auth: false
     };
+
+    this.mostra = true
 
     this.httpClient.post<Login>('http://localhost:4000/usuarios/login', body).subscribe((usuarioLogado) => {
       this.mostra = false
@@ -40,7 +41,7 @@ export class LoginComponent implements OnInit {
       window.sessionStorage.setItem('tipoAcesso',usuarioLogado.tipoAcesso)
         this.rota.navigate(['/home']);
     })
-    this.mostra = true
+    
 }
 }
 

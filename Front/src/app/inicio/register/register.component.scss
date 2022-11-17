@@ -53,6 +53,10 @@
     border: solid 1px rgb(255, 76, 76);
 }
 
+h1 {
+    text-align: center;
+}
+
 @media screen and (max-width: 980px) {
     .dale {
         display: none !important;

@@ -13,14 +13,14 @@
           <div>
             <div class="form-outline mb-2">
               <label class="form-label" for="nome">Nome completo</label>
-              <input type="name" id="nome" class="form-control form-width" [(ngModel)]="paciente.nome" name="nome"
+              <input type="text" id="nome" class="form-control form-width" [(ngModel)]="paciente.nome" name="nome"
                 ngDefaultControl #nome="ngModel" required maxlength="30"
                 [ngClass]="{'error' : nome.errors && nome.touched}" autocomplete="off" placeholder="Nome completo do paciente"/>
             </div>
 
             <div class="form-outline mb-2">
               <label class="form-label" for="cpf">CPF</label>
-              <input type="name" id="cpf" class="form-control form-width" [(ngModel)]="paciente.cpf" name="cpf"
+              <input type="text" id="cpf" class="form-control form-width" [(ngModel)]="paciente.cpf" name="cpf"
                 ngDefaultControl #cpf="ngModel" required maxlength="18"
                 [ngClass]="{'error' : cpf.errors && cpf.touched}" autocomplete="off" placeholder="CPF do paciente" mask="CPF_CNPJ"/>
             </div>
