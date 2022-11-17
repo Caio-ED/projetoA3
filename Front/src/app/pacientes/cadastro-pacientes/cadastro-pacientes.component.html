@@ -61,14 +61,14 @@
               <div class="form-endereco-duplo">
                 <label class="form-label" for="rua">Endereço</label>
                 <input type="text" id="rua" class="form-control form-endereco" [(ngModel)]="paciente.rua" name="rua"
-                  ngDefaultControl #rua="ngModel" required [ngClass]="{'error' : rua.errors && rua.touched}"
+                  ngDefaultControl #rua="ngModel"  [ngClass]="{'error' : rua.errors && rua.touched}"
                   autocomplete="off" placeholder="Endereço do paciente" />
               </div>
 
               <div class="form-endereco-duplo">
                 <label class="form-label" for="numero">Número</label>
                 <input type="text" id="numero" class="form-control form-numero" [(ngModel)]="paciente.numero"
-                  name="numero" ngDefaultControl #numero="ngModel" required maxlength="4"
+                  name="numero" ngDefaultControl #numero="ngModel"  maxlength="4"
                   [ngClass]="{'error' : numero.errors && numero.touched}" autocomplete="off" placeholder="Nº" />
               </div>
             </div>
@@ -77,7 +77,7 @@
               <div class="form-endereco-duplo">
                 <label class="form-label" for="complemento">Complemento</label>
                 <input type="address-complemento" id="complemento" class="form-control form-complemento"
-                  [(ngModel)]="paciente.complemento" name="complemento" ngDefaultControl #complemento="ngModel" required
+                  [(ngModel)]="paciente.complemento" name="complemento" ngDefaultControl #complemento="ngModel"
                   [ngClass]="{'error' : complemento.errors && complemento.touched}" autocomplete="off"
                   placeholder="Complemento" />
               </div>
@@ -85,7 +85,7 @@
               <div class="form-endereco-duplo">
                 <label class="form-label" for="bairro">Bairro</label>
                 <input type="address-bairro" id="bairro" class="form-control form-bairro" [(ngModel)]="paciente.bairro"
-                  name="bairro" ngDefaultControl #bairro="ngModel" required
+                  name="bairro" ngDefaultControl #bairro="ngModel" 
                   [ngClass]="{'error' : bairro.errors && bairro.touched}" autocomplete="off" placeholder="Bairro" />
               </div>
             </div>
@@ -94,7 +94,7 @@
               <div class="form-endereco-duplo">
                 <label class="form-label" for="estado">Estado</label>
                 <input type="address-estado" id="estado" class="form-control form-estado" [(ngModel)]="paciente.estado"
-                  name="estado" ngDefaultControl #estado="ngModel" required
+                  name="estado" ngDefaultControl #estado="ngModel" 
                   [ngClass]="{'error' : estado.errors && estado.touched}" autocomplete="off" placeholder="Estado"
                   mask="SS" />
               </div>
@@ -102,7 +102,7 @@
               <div>
                 <label class="form-label" for="cidade">Cidade</label>
                 <input type="address-cidade" id="cidade" class="form-control form-cidade" [(ngModel)]="paciente.cidade"
-                  name="cidade" ngDefaultControl #cidade="ngModel" required
+                  name="cidade" ngDefaultControl #cidade="ngModel" 
                   [ngClass]="{'error' : cidade.errors && cidade.touched}" autocomplete="off" placeholder="Cidade" />
               </div>
             </div>
