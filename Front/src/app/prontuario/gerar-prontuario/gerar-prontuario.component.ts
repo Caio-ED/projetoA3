@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
 import { Prontuario } from 'src/app/models/prontuario'
 
 @Component({
@@ -12,7 +11,7 @@ import { Prontuario } from 'src/app/models/prontuario'
 export class GerarProntuarioComponent implements OnInit {
 
   prontuario= {
-    nomeProntuario: "",
+    cpfProntuario: "",
     inicioTratamento: "",
     tipoDoenca: "",
     gravidade: "",
@@ -22,14 +21,16 @@ export class GerarProntuarioComponent implements OnInit {
 
   gerarProntuario(form:NgForm){
     this.httpClient.post<Prontuario>('http://localhost:5000/prontuarios/cadastro', this.prontuario).subscribe((prontuarioGerado) =>{
-      console.log(this.prontuario);
+    alert('Prontuário gerado com sucesso!')
+    var limparForm= <HTMLFormElement>document.getElementById('gerarProntuario');
+    limparForm.reset();
+    console.log(this.prontuario);
     })
   }
   
 
   constructor(
-    private httpClient: HttpClient,
-    private rota: Router) { }
+    private httpClient: HttpClient,) { }
 
   ngOnInit(): void {
   }

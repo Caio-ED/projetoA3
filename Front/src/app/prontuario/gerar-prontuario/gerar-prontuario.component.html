@@ -6,17 +6,17 @@
     <div class="alto-relevo">
 
 
-      <form #gerarPront="ngForm" (ngSubmit)="gerarPront.form.valid && gerarProntuario(prontuarioForm)" #prontuarioForm="ngForm" class="dale">
+      <form #gerarPront="ngForm" id="gerarProntuario" (ngSubmit)="gerarPront.form.valid && gerarProntuario(prontuarioForm)" #prontuarioForm="ngForm" class="dale">
          
         <h2 class="espacamento">Prontuário Médico</h2>
         <div class="form-prontuario">
 
           <div>
             <div class="form-outline mb-2">
-              <label class="form-label" for="nomeProntuario">Nome completo</label>
-              <input type="name" id="nomeProntuario" class="form-control form-width" autocomplete="off"
-                [(ngModel)]="prontuario.nomeProntuario" name="nomeProntuario" ngDefaultControl #nomeProntuario="ngModel" required maxlength="42"
-                [ngClass]="{'error' : nomeProntuario.errors && nomeProntuario.touched}" placeholder="Nome completo do paciente" />
+              <label class="form-label" for="cpfProntuario">CPF do paciente</label>
+              <input type="text" id="cpfProntuario" class="form-control form-width" autocomplete="off"
+                [(ngModel)]="prontuario.cpfProntuario" name="cpfProntuario" ngDefaultControl #cpfProntuario="ngModel" required maxlength="18"
+                [ngClass]="{'error' : cpfProntuario.errors && cpfProntuario.touched}" placeholder="CPF do paciente" mask="CPF_CNPJ"/>
             </div>
 
             <div class="form-outline mb-2">

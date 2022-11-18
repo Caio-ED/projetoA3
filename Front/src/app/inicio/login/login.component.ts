@@ -31,15 +31,15 @@ export class LoginComponent implements OnInit {
       passwordFuncionario: this.inputSenha,
       auth: false
     };
-
-    this.mostra = true
-
+    
     this.httpClient.post<Login>('http://localhost:4000/usuarios/login', body).subscribe((usuarioLogado) => {
-      this.mostra = false
       window.sessionStorage.setItem('nomeFuncionario',usuarioLogado.nomeFuncionario)
       window.sessionStorage.setItem('emailFuncionario',usuarioLogado.emailFuncionario)
       window.sessionStorage.setItem('tipoAcesso',usuarioLogado.tipoAcesso)
-        this.rota.navigate(['/home']);
+      this.mostra = false
+      this.rota.navigate(['/home']);
+    },(e)=>{
+      this.mostra = true
     })
     
 }

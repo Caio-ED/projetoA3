@@ -7,7 +7,7 @@
         <div class="text-search">
             <div class="text-search2">
                 <label for="pacientes-table"></label>
-                <input class="input-search form-control" type="search" placeholder="Pesquisar paciente via CPF" [(ngModel)]="cpfPesquisa" autocomplete="off" mask="CPF_CNPJ">
+                <input class="input-search form-control" type="search" placeholder="Pesquisar paciente via CPF"  [(ngModel)]="cpfPesquisa" autocomplete="off" mask="CPF_CNPJ">
             </div>
                 <button type="button" class="btn button-search" (click)="visualizarPaciente()">Pesquisar</button>
         </div>
@@ -21,7 +21,7 @@
                         <div class="col-12">
                           <div class="card">
                             <div class="card-body p-0">
-                              <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 90px;">
+                              <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 500px;">
                                 <table class="table table-striped mb-0">
                                   <thead style="background-color: #10203c;">
                                     <tr>

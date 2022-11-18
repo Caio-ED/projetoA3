@@ -1,6 +1,6 @@
 export interface Prontuario {
     
-    nomeProntuario: string;
+    cpfProntuario: string;
     inicioTratamento: string;
     tipoDoenca: string;
     gravidade: string;

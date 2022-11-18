@@ -5,6 +5,5 @@ export interface Login {
     emailFuncionario: '',
     passwordFuncionario: '',
     tipoAcesso: '',
-    msg: '',
     auth: false
 }

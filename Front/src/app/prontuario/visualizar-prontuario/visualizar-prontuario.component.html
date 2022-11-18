@@ -6,9 +6,9 @@
         <div class="text-search">
             <div class="text-search2">
                 <label for="pacientes-table"></label>
-                <input class="input-search form-control" type="search" placeholder="Pesquisar" autocomplete="off">
+                <input class="input-search form-control" type="search" placeholder="Pesquisar" autocomplete="off" mask="CPF_CNPJ" [(ngModel)]="cpfPesquisa">
             </div>
-                <button type="button" class="btn button-search">Pesquisar</button>
+                <button type="button" class="btn button-search" (click)="visualizarProntuario()">Pesquisar</button>
         </div>
 
         <div class="tabela">
@@ -24,7 +24,7 @@
                                 <table class="table table-striped mb-0">
                                   <thead style="background-color: #10203c;">
                                     <tr>
-                                      <th scope="col">Nome</th>
+                                      <th scope="col">CPF Paciente</th>
                                       <th scope="col">Ínicio do tratamento</th>
                                       <th scope="col">Tipo de doença</th>
                                       <th scope="col">Gravidade</th>
@@ -33,30 +33,14 @@
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    <tr>
-                                      <td>José Azevedo</td>
-                                      <td>19/04/2022</td>
-                                      <td>Transtorno Bipolar</td>
-                                      <td>Média</td>
-                                      <td>Nenhum</td>
-                                      <td>Paciente necessita de [...]</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Cláudio</td>
-                                      <td>30/07/2021</td>
-                                      <td>Somatização</td>
-                                      <td>Alta</td>
-                                      <td>Nenhum</td>
-                                      <td>Paciente necessita de [...]</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Sim</td>
-                                      <td>19/04/2020</td>
-                                      <td>Transtorno Bipolar</td>
-                                      <td>Média</td>
-                                      <td>Nenhum</td>
-                                      <td>Paciente necessita de [...]</td>
-                                    </tr>                             
+                                    <tr *ngFor="let pront of Prontuario; index as i; first as isFirst">
+                                      <td>{{pront.cpfProntuario}}</td>
+                                      <td>{{pront.inicioTratamento}}</td>
+                                      <td>{{pront.tipoDoenca}}</td>
+                                      <td>{{pront.gravidade}}</td>
+                                      <td>{{pront.medicamento}}</td>
+                                      <td>{{pront.observacoes}}</td>
+                                    </tr>                               
                                   </tbody>
                                 </table>
                               </div>
